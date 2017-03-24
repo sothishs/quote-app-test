@@ -1,22 +1,13 @@
 {
-  "name": "quote-app-test",
-  "version": "1.0.0",
-  "description": "This is a test app",
-  "main": "index.js",
+  "name": "ilovemycity",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sothishs/quote-app-test.git"
-  },
-  "author": "Sothish",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sothishs/quote-app-test/issues"
-  },
-  "homepage": "https://github.com/sothishs/quote-app-test#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "debug": "~2.6.0",
+    "ejs": "~2.5.5",
+    "express": "~4.14.1"
   }
 }
