@@ -1,7 +1,7 @@
 exports.city=function(req,res){
     var cityName=req.params.city;
     var title,heading;
-    var imageCount=4;
+    var imageArray=[1,2,3,4];
     
 
     if(cityName==='berlin'){
@@ -23,12 +23,13 @@ exports.city=function(req,res){
     else if(cityName==='newyork'){
        title="New York";
        heading="New York: Come to New York to become someone new";
-       imageCount=6;
+       imageArray.push(5);
+       imageArray.push(6);
     }
 
     res.render('city',{
         title:title,
         headline:heading,
         city:cityName,
-        numberOfImages:imageCount});
+        imageArray:imageArray});
   }

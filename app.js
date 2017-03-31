@@ -1,15 +1,17 @@
 var express=require('express');
+var exphbs=require('express-handlebars');
 var app=express();
 var path = require('path');
 
 var index = require('./routes/index');
 var cities = require('./routes/city');
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
 app.use(express.static(path.join(__dirname, 'public')));
+
+// view engine setup
+//app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'handlebars');
+app.engine('handlebars', exphbs({defaultLayout:'main'}));
 
 app.get('/', index.home);
 app.get('/:city', cities.city);
